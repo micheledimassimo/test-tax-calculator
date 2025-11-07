@@ -1,5 +1,5 @@
 <?php
-require_once 'function.php';
+require_once 'calculator.php';
 class Receipt {
 
     private array $items = [];
@@ -19,12 +19,12 @@ class Receipt {
             $totalTaxes += $tax;
             $total += $finalPrice;
             echo "<ul>";
-            echo "<li> {$item->quantity} {$item->name}"." ".number_format($finalPrice, 2);
+            echo "<li> {$item->quantity} {$item->name}"." ".number_format($finalPrice, 2)."€";
             echo "</ul>";
         }
         echo "<ul>";
-        echo "<li> Sales Tasex: ".number_format($totalTaxes, 2);
-        echo "<li> Total ".number_format($total, 2);
+        echo "<li> Sales Tasex: ".number_format($totalTaxes, 2)."€";
+        echo "<li> Total ".number_format($total, 2)."€";
         echo "</ul>";
         
     }
