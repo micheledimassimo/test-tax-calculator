@@ -1,13 +1,14 @@
 <?php
 require_once 'calculator.php';
 class Receipt {
-
+    //funzione che aggiunge l'item creato nell'istanza nell'array
     private array $items = [];
 
     public function addItems(Item $item) {
         $this->items[] = $item;
     }
 
+    //funzione che calcola il prezzo totale ciclando l'array e poi li stampa
     public function printReceipt() {
 
         $totalTaxes = 0;

@@ -3,7 +3,7 @@
     require_once 'calculator.php';
     require_once 'receipt.php';
 
-    //creo gli input delle ricevute, ovvero le nuove istanze di receiopt e item
+    //creo gli input delle ricevute, ovvero le nuove istanze di receipt e item
 
     $receipt1 = new Receipt();
     $receipt1->addItems(new Item(2,"book",12.49,false,true));
@@ -40,6 +40,7 @@
                 <h1 class="text-center py-3">
                     Tax Calculator
                 </h1>
+                <!-- Stampo le ricevute a schermo -->
                 <div class="row py-3">
                     <div class="col-4 py-1 px-3">
                     <h3>
